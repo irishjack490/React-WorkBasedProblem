@@ -1,14 +1,19 @@
+import Nav from './components/Nav'
 import './App.css';
 
-import Nav from './components/Nav'
 import { useState } from 'react';
 
 function App() {
   const [theme, setTheme] = useState('light-mode')
+  
+  function handleClick (){
+    setTheme(theme ? 'lightmode' : 'darkmode')
+  }
+
 
   return (
     <div>
-      <Nav />
+      <Nav OnClick={handleClick}/>
     </div>
   );
 }

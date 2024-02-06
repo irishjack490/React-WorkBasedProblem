@@ -9,6 +9,7 @@ const Header = () => {
   const handleButtonClick = () => {
     setClicked(!clicked); // Toggle the theme mode on button click
     setButtonText(clicked ? 'lightmode' : 'darkmode'); // Change button text based on theme mode
+  
   };
 
 
@@ -43,6 +44,7 @@ const Header = () => {
           </li>
           <li>
             <button onClick={handleButtonClick}>{buttonText || 'theme button'}</button>
+            
           </li>
         </ul>
       </nav>

@@ -1,4 +1,4 @@
-const Welcome = (props) => {
+const Main = (props) => {
   return (
     <div className={props.theme}>
       <div className="content">
@@ -39,4 +39,4 @@ const Welcome = (props) => {
   )
 }
 
-export default Welcome
+export default Main
