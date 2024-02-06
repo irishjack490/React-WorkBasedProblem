@@ -1,4 +1,17 @@
+import {useState} from "react";
+
+
+
 const Header = () => {
+  const [clicked, setClicked] = useState(true);
+  const [buttonText, setButtonText] = useState('');
+
+  const handleButtonClick = () => {
+    setClicked(!clicked); // Toggle the theme mode on button click
+    setButtonText(clicked ? 'lightmode' : 'darkmode'); // Change button text based on theme mode
+  };
+
+
   return (
     <header>
       <nav>
@@ -29,7 +42,7 @@ const Header = () => {
             <a href="#contact">CONTACT</a>
           </li>
           <li>
-            <button>theme button</button>
+            <button onClick={handleButtonClick}>{buttonText || 'theme button'}</button>
           </li>
         </ul>
       </nav>

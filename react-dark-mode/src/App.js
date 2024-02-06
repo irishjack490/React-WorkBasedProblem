@@ -1,7 +1,6 @@
 import './App.css';
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
+
+import Nav from './components/Nav'
 import { useState } from 'react';
 
 function App() {
@@ -9,9 +8,7 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <Main theme={theme} />
-      <Footer theme={theme} />
+      <Nav />
     </div>
   );
 }
